@@ -2,6 +2,9 @@ package org.hoteia.jqgrid.mapping;
 
 import java.io.Serializable;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown=true)
 public class JqGridOptionPojo implements Serializable {
 
 	private String test;

@@ -2,11 +2,17 @@ package org.hoteia.jqgrid.mapping;
 
 import java.io.Serializable;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown=true)
 public class JqGridFormatOptionPojo implements Serializable {
 
     private boolean keys = false;
+    
 	private JqGridOptionPojo editOptions;
+	
 	private JqGridOptionPojo addOptions;
+	
 	private JqGridOptionPojo delOptions;
 
 	public boolean isKeys() {

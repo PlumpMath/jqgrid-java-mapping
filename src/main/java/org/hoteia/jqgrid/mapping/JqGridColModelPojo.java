@@ -2,8 +2,10 @@ package org.hoteia.jqgrid.mapping;
 
 import java.io.Serializable;
 
-import com.fasterxml.jackson.annotation.JsonRawValue;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
+@JsonIgnoreProperties(ignoreUnknown=true)
 public class JqGridColModelPojo implements Serializable {
 
     private String label;
@@ -11,17 +13,30 @@ public class JqGridColModelPojo implements Serializable {
     private String key;
     private String width;
 
-    private String sortable;
-    private String sorttype;
-    private String stype;
+    private boolean editable;
+
+    @JsonProperty("edittype")
+    private String editType; // text
     
-    @JsonRawValue
+    private boolean sortable;
+    
+	@JsonProperty("sorttype")
+    private String sortType;
+    
+	private String stype;
+    
     private String formatter;
     
     private String search;
+    
+    @JsonProperty("editoptions")
+    private JqGridEditOptionPojo editOptions = new JqGridEditOptionPojo();
 
-    private JqGridSearchOptionPojo searchoptions = new JqGridSearchOptionPojo();
-    private JqGridFormatOptionPojo formatoptions = new JqGridFormatOptionPojo();
+    @JsonProperty("searchoptions")
+    private JqGridSearchOptionPojo searchOptions = new JqGridSearchOptionPojo();
+    
+    @JsonProperty("formatoptions")
+    private JqGridFormatOptionPojo formatOptions = new JqGridFormatOptionPojo();
 
 	public String getLabel() {
 		return label;
@@ -55,20 +70,36 @@ public class JqGridColModelPojo implements Serializable {
 		this.width = width;
 	}
 
-	public String getSortable() {
-		return sortable;
-	}
-	
-	public void setSortable(String sortable) {
-		this.sortable = sortable;
-	}
-	
-	public String getSorttype() {
-		return sorttype;
+	public boolean isEditable() {
+		return editable;
 	}
 
-	public void setSorttype(String sorttype) {
-		this.sorttype = sorttype;
+	public void setEditable(boolean editable) {
+		this.editable = editable;
+	}
+
+	public String getEditType() {
+		return editType;
+	}
+
+	public void setEditType(String editType) {
+		this.editType = editType;
+	}
+
+	public boolean isSortable() {
+		return sortable;
+	}
+
+	public void setSortable(boolean sortable) {
+		this.sortable = sortable;
+	}
+
+	public String getSortType() {
+		return sortType;
+	}
+	
+	public void setSortType(String sortType) {
+		this.sortType = sortType;
 	}
 
 	public String getStype() {
@@ -94,21 +125,29 @@ public class JqGridColModelPojo implements Serializable {
 	public void setSearch(String search) {
 		this.search = search;
 	}
-
-	public JqGridSearchOptionPojo getSearchoptions() {
-		return searchoptions;
+	
+	public JqGridEditOptionPojo getEditOptions() {
+		return editOptions;
 	}
 	
-	public void setSearchoptions(JqGridSearchOptionPojo searchoptions) {
-		this.searchoptions = searchoptions;
+	public void setEditOptions(JqGridEditOptionPojo editOptions) {
+		this.editOptions = editOptions;
 	}
 
-	public JqGridFormatOptionPojo getFormatoptions() {
-		return formatoptions;
+	public JqGridSearchOptionPojo getSearchOptions() {
+		return searchOptions;
 	}
 	
-	public void setFormatoptions(JqGridFormatOptionPojo formatoptions) {
-		this.formatoptions = formatoptions;
+	public void setSearchOptions(JqGridSearchOptionPojo searchOptions) {
+		this.searchOptions = searchOptions;
+	}
+	
+	public JqGridFormatOptionPojo getFormatOptions() {
+		return formatOptions;
+	}
+	
+	public void setFormatOptions(JqGridFormatOptionPojo formatOptions) {
+		this.formatOptions = formatOptions;
 	}
 	
 }
