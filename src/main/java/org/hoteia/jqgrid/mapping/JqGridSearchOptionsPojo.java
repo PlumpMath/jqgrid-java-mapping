@@ -26,7 +26,7 @@ public class JqGridSearchOptionsPojo implements Serializable {
 //    private String attr;
     
     @JsonProperty("searchhidden")
-    private boolean searchHidden;
+    private boolean searchHidden = false;
     
     @JsonProperty("sopt")
     private String[] sOpt;
@@ -38,7 +38,7 @@ public class JqGridSearchOptionsPojo implements Serializable {
     private String value;
     
     @JsonProperty("clearSearch")
-    private boolean clearSearch;
+    private boolean clearSearch = false;
 
     public String getDataUrl() {
         return dataUrl;

@@ -26,10 +26,10 @@ public class JqGridPojo<C> {
 	private List<JqGridColModelPojo> colModels = new ArrayList<JqGridColModelPojo>();
 
 	@JsonProperty("viewrecords")
-	private boolean viewRecords;
+	private boolean viewRecords = false;
 
 	@JsonProperty("loadonce")
-	private boolean loadOnce;
+	private boolean loadOnce = false;
 	
 	private int page;
 	private int width;
@@ -38,9 +38,12 @@ public class JqGridPojo<C> {
 	private int scroll;
 
 	private String sortname;
-	private boolean subGrid;
+	
+	private boolean subGrid = false;
+	
 	@JsonProperty("subgridtype")
 	private String subGridType;
+	
 	private String subGridUrl;
 
 	@JsonProperty("subGridModel")
@@ -48,6 +51,7 @@ public class JqGridPojo<C> {
 
 	private String pager;
 	private String caption;
+	
 	@JsonProperty("emptyrecords")
 	private String emptyRecords;
 

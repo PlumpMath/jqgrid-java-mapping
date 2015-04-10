@@ -12,7 +12,7 @@ public class JqGridFilterToolbarOptionsPojo implements Serializable {
     private String value;
 
     @JsonProperty("autosearch")
-    private boolean autoSearch;
+    private boolean autoSearch = true;
 
     @JsonRawValue
     @JsonProperty("beforeSearch")
@@ -31,10 +31,10 @@ public class JqGridFilterToolbarOptionsPojo implements Serializable {
     private String afterClear;
 
     @JsonProperty("searchOnEnter")
-    private boolean searchOnEnter;
+    private boolean searchOnEnter = false;
 
     @JsonProperty("stringResult")
-    private boolean stringResult;
+    private boolean stringResult = false;
 
     @JsonProperty("groupOp")
     private String groupOp;
@@ -43,7 +43,7 @@ public class JqGridFilterToolbarOptionsPojo implements Serializable {
     private String defaultSearch;
 
     @JsonProperty("searchOperators")
-    private boolean searchOperators;
+    private boolean searchOperators = false;
 
     @JsonProperty("operandTitle")
     private String operandTitle;

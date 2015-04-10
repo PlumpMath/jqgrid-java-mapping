@@ -14,12 +14,13 @@ public class JqGridColModelPojo implements Serializable {
     private String key;
     private String width;
 
-    private boolean editable;
+    private boolean hidden = false;
+    private boolean editable = false;
 
     @JsonProperty("edittype")
     private String editType; // text
     
-    private boolean sortable;
+    private boolean sortable = true;
     
 	@JsonProperty("sorttype")
     private String sortType;
@@ -27,7 +28,7 @@ public class JqGridColModelPojo implements Serializable {
     @JsonRawValue
     private String formatter;
     
-    private boolean search;
+    private boolean search = false;
     private String stype;
     
     @JsonProperty("editoptions")
@@ -75,7 +76,15 @@ public class JqGridColModelPojo implements Serializable {
 		return editable;
 	}
 
-	public void setEditable(boolean editable) {
+	public boolean isHidden() {
+        return hidden;
+    }
+
+    public void setHidden(boolean hidden) {
+        this.hidden = hidden;
+    }
+
+    public void setEditable(boolean editable) {
 		this.editable = editable;
 	}
 

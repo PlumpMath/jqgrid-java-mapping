@@ -18,7 +18,7 @@ public class JqGridSubModelPojo<C> {
 	@JsonProperty("align")
 	private List<String> aligns = new ArrayList<String>();
 
-	private boolean params;
+	private boolean params = false;
 
 	public List<String> getNames() {
 		return names;
