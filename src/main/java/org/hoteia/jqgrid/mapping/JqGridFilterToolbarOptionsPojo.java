@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonIgnoreProperties(ignoreUnknown=true)
-public class JqGridFilterToolbarPojo implements Serializable {
+public class JqGridFilterToolbarOptionsPojo implements Serializable {
 
     private String value;
 
