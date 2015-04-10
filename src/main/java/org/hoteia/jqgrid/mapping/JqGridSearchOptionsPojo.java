@@ -7,7 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonRawValue;
 
 @JsonIgnoreProperties(ignoreUnknown=true)
-public class JqGridSearchOptionPojo implements Serializable {
+public class JqGridSearchOptionsPojo implements Serializable {
 
     @JsonProperty("dataUrl")
 	private String dataUrl;

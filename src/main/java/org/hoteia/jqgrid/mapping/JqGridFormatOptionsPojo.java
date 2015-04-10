@@ -5,7 +5,7 @@ import java.io.Serializable;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown=true)
-public class JqGridFormatOptionPojo implements Serializable {
+public class JqGridFormatOptionsPojo implements Serializable {
 
     private boolean keys = false;
     

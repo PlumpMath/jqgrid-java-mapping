@@ -5,7 +5,7 @@ import java.io.Serializable;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown=true)
-public class JqGridNavGridOptionPojo implements Serializable {
+public class JqGridNavGridOptionsPojo implements Serializable {
 
     private boolean search = false;
     private boolean add = false;

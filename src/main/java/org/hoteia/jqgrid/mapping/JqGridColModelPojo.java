@@ -34,10 +34,10 @@ public class JqGridColModelPojo implements Serializable {
     private JqGridEditOptionPojo editOptions = new JqGridEditOptionPojo();
 
     @JsonProperty("searchoptions")
-    private JqGridSearchOptionPojo searchOptions = new JqGridSearchOptionPojo();
+    private JqGridSearchOptionsPojo searchOptions = new JqGridSearchOptionsPojo();
     
     @JsonProperty("formatoptions")
-    private JqGridFormatOptionPojo formatOptions = new JqGridFormatOptionPojo();
+    private JqGridFormatOptionsPojo formatOptions = new JqGridFormatOptionsPojo();
 
 	public String getLabel() {
 		return label;
@@ -141,19 +141,19 @@ public class JqGridColModelPojo implements Serializable {
 		this.editOptions = editOptions;
 	}
 
-	public JqGridSearchOptionPojo getSearchOptions() {
+	public JqGridSearchOptionsPojo getSearchOptions() {
 		return searchOptions;
 	}
 	
-	public void setSearchOptions(JqGridSearchOptionPojo searchOptions) {
+	public void setSearchOptions(JqGridSearchOptionsPojo searchOptions) {
 		this.searchOptions = searchOptions;
 	}
 	
-	public JqGridFormatOptionPojo getFormatOptions() {
+	public JqGridFormatOptionsPojo getFormatOptions() {
 		return formatOptions;
 	}
 	
-	public void setFormatOptions(JqGridFormatOptionPojo formatOptions) {
+	public void setFormatOptions(JqGridFormatOptionsPojo formatOptions) {
 		this.formatOptions = formatOptions;
 	}
 	
