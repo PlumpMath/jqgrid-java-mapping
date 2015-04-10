@@ -23,11 +23,10 @@ public class JqGridColModelPojo implements Serializable {
 	@JsonProperty("sorttype")
     private String sortType;
     
-	private String stype;
-    
     private String formatter;
     
     private boolean search;
+    private String stype;
     
     @JsonProperty("editoptions")
     private JqGridEditOptionPojo editOptions = new JqGridEditOptionPojo();
@@ -94,20 +93,15 @@ public class JqGridColModelPojo implements Serializable {
 		this.sortable = sortable;
 	}
 
-	public String getSortType() {
-		return sortType;
+    public String getSortType() {
+        if (sortType != null) {
+            return sortType;
+        }
+		return "text";
 	}
 	
 	public void setSortType(String sortType) {
 		this.sortType = sortType;
-	}
-
-	public String getStype() {
-		return stype;
-	}
-
-	public void setStype(String stype) {
-		this.stype = stype;
 	}
 
 	public String getFormatter() {
@@ -126,6 +120,17 @@ public class JqGridColModelPojo implements Serializable {
         this.search = search;
     }
 
+    public String getStype() {
+        if (stype != null) {
+            return stype;
+        }
+        return "text";
+    }
+
+    public void setStype(String stype) {
+        this.stype = stype;
+    }
+    
     public JqGridEditOptionPojo getEditOptions() {
 		return editOptions;
 	}
