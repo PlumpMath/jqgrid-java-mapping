@@ -13,10 +13,21 @@ public class JqGridFilterToolbarPojo implements Serializable {
     @JsonProperty("autosearch")
     private boolean autoSearch;
 
-    // private String beforeSearch;
-    // private String afterSearch;
-    // private String beforeClear;
-    // private String afterClear;
+    @JsonRawValue
+    @JsonProperty("beforeSearch")
+    private String beforeSearch;
+    
+    @JsonRawValue
+    @JsonProperty("afterSearch")
+    private String afterSearch;
+    
+    @JsonRawValue
+    @JsonProperty("beforeClear")
+    private String beforeClear;
+    
+    @JsonRawValue
+    @JsonProperty("afterClear")
+    private String afterClear;
 
     @JsonProperty("searchOnEnter")
     private boolean searchOnEnter;
@@ -53,6 +64,38 @@ public class JqGridFilterToolbarPojo implements Serializable {
 
     public void setAutoSearch(boolean autoSearch) {
         this.autoSearch = autoSearch;
+    }
+
+    public String getBeforeSearch() {
+        return beforeSearch;
+    }
+
+    public void setBeforeSearch(String beforeSearch) {
+        this.beforeSearch = beforeSearch;
+    }
+
+    public String getAfterSearch() {
+        return afterSearch;
+    }
+
+    public void setAfterSearch(String afterSearch) {
+        this.afterSearch = afterSearch;
+    }
+
+    public String getBeforeClear() {
+        return beforeClear;
+    }
+
+    public void setBeforeClear(String beforeClear) {
+        this.beforeClear = beforeClear;
+    }
+
+    public String getAfterClear() {
+        return afterClear;
+    }
+
+    public void setAfterClear(String afterClear) {
+        this.afterClear = afterClear;
     }
 
     public boolean isSearchOnEnter() {

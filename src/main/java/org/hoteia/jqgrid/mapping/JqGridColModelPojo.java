@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonRawValue;
 
 @JsonIgnoreProperties(ignoreUnknown=true)
 public class JqGridColModelPojo implements Serializable {
@@ -23,6 +24,7 @@ public class JqGridColModelPojo implements Serializable {
 	@JsonProperty("sorttype")
     private String sortType;
     
+    @JsonRawValue
     private String formatter;
     
     private boolean search;
