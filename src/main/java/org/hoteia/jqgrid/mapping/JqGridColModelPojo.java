@@ -27,7 +27,7 @@ public class JqGridColModelPojo implements Serializable {
     
     private String formatter;
     
-    private String search;
+    private boolean search;
     
     @JsonProperty("editoptions")
     private JqGridEditOptionPojo editOptions = new JqGridEditOptionPojo();
@@ -118,15 +118,15 @@ public class JqGridColModelPojo implements Serializable {
 		this.formatter = formatter;
 	}
 	
-	public String getSearch() {
-		return search;
-	}
-	
-	public void setSearch(String search) {
-		this.search = search;
-	}
-	
-	public JqGridEditOptionPojo getEditOptions() {
+	public boolean isSearch() {
+        return search;
+    }
+
+    public void setSearch(boolean search) {
+        this.search = search;
+    }
+
+    public JqGridEditOptionPojo getEditOptions() {
 		return editOptions;
 	}
 	
