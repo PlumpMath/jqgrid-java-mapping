@@ -8,7 +8,11 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class JqGridFormatOptionsPojo implements Serializable {
 
     private boolean keys = false;
-    
+
+    private String srcformat;
+    private String newformat;
+    private String defaultValue;
+
 	private JqGridOptionPojo editOptions;
 	
 	private JqGridOptionPojo addOptions;
@@ -23,7 +27,31 @@ public class JqGridFormatOptionsPojo implements Serializable {
 		this.keys = keys;
 	}
 
-	public JqGridOptionPojo getEditOptions() {
+	public String getSrcformat() {
+        return srcformat;
+    }
+
+    public void setSrcformat(String srcformat) {
+        this.srcformat = srcformat;
+    }
+
+    public String getNewformat() {
+        return newformat;
+    }
+
+    public void setNewformat(String newformat) {
+        this.newformat = newformat;
+    }
+
+    public String getDefaultValue() {
+        return defaultValue;
+    }
+
+    public void setDefaultValue(String defaultValue) {
+        this.defaultValue = defaultValue;
+    }
+
+    public JqGridOptionPojo getEditOptions() {
 		return editOptions;
 	}
 
