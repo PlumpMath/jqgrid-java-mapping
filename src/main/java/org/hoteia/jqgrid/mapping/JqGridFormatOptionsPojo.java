@@ -3,14 +3,20 @@ package org.hoteia.jqgrid.mapping;
 import java.io.Serializable;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonIgnoreProperties(ignoreUnknown=true)
 public class JqGridFormatOptionsPojo implements Serializable {
 
     private boolean keys = false;
 
-    private String srcformat;
-    private String newformat;
+    @JsonProperty("srcformat")
+    private String srcFormat;
+    
+    @JsonProperty("newformat")
+    private String newFormat;
+    
+    @JsonProperty("defaultValue")
     private String defaultValue;
 
 	private JqGridOptionPojo editOptions;
@@ -27,20 +33,20 @@ public class JqGridFormatOptionsPojo implements Serializable {
 		this.keys = keys;
 	}
 
-	public String getSrcformat() {
-        return srcformat;
+	public String getSrcFormat() {
+        return srcFormat;
+    }
+	
+	public void setSrcFormat(String srcFormat) {
+        this.srcFormat = srcFormat;
     }
 
-    public void setSrcformat(String srcformat) {
-        this.srcformat = srcformat;
+    public String getNewFormat() {
+        return newFormat;
     }
-
-    public String getNewformat() {
-        return newformat;
-    }
-
-    public void setNewformat(String newformat) {
-        this.newformat = newformat;
+    
+    public void setNewFormat(String newFormat) {
+        this.newFormat = newFormat;
     }
 
     public String getDefaultValue() {
