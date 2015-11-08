@@ -22,6 +22,9 @@ public class JqGridColModelPojo implements Serializable {
     
     private boolean sortable = true;
     
+    @JsonProperty("sorttype")
+    private String sortType; // text
+    
     @JsonRawValue
     private String formatter;
     
@@ -100,6 +103,17 @@ public class JqGridColModelPojo implements Serializable {
 
     public void setSortable(boolean sortable) {
         this.sortable = sortable;
+    }
+    
+    public String getSortType() {
+        if (sortType != null) {
+            return sortType;
+        }
+        return "text";
+    }
+    
+    public void setSortType(String sortType) {
+        this.sortType = sortType;
     }
 
 	public String getFormatter() {
