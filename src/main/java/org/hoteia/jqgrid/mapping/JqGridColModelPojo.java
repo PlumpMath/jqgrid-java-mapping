@@ -29,6 +29,7 @@ public class JqGridColModelPojo implements Serializable {
     private String formatter;
     
     private boolean search = false;
+    
     @JsonProperty("stype")
     private String searchType;
     
@@ -41,6 +42,32 @@ public class JqGridColModelPojo implements Serializable {
     @JsonProperty("formatoptions")
     private JqGridFormatOptionsPojo formatOptions = new JqGridFormatOptionsPojo();
 
+    public JqGridColModelPojo() {
+    }
+    
+    public JqGridColModelPojo(String label, String name, String key, String width, boolean search) {
+        this.label = label;
+        this.name = name;
+        this.key = key;
+        this.width = width;
+        this.search = search;
+    }
+    
+    public JqGridColModelPojo(String label, String name, String key, String width, boolean hidden, boolean editable, String editType, 
+                              String sortType, String formatter, boolean search, String searchType) {
+        this.label = label;
+        this.name = name;
+        this.key = key;
+        this.width = width;
+        this.hidden = hidden;
+        this.editable = editable;
+        this.editType = editType;
+        this.sortType = sortType;
+        this.formatter = formatter;
+        this.search = search;
+        this.searchType = searchType;
+    }
+    
 	public String getLabel() {
 		return label;
 	}
