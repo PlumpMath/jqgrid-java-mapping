@@ -45,9 +45,7 @@ public class JqGridColModelPojo implements Serializable {
     public JqGridColModelPojo() {
     }
     
-    public JqGridColModelPojo(String label, String name, String key, boolean hidden) {
-        this.label = label;
-        this.name = name;
+    public JqGridColModelPojo(String key, boolean hidden) {
         this.key = key;
         this.hidden = hidden;
     }

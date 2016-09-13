@@ -1,4 +1,4 @@
-package fr.hoteia.opticmarketplace.web.mvc.jqgrid;
+package org.hoteia.jqgrid.util;
 
 import org.hoteia.jqgrid.mapping.JqGridSearchOptionsPojo;
 
